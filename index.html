@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .nav-categories {
+            padding: 15px;
+            border-bottom: 1px solid #e5e5e5;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+        .category-pill {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-right: 10px;
+            border-radius: 20px;
+            background: #f5f5f5;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .category-pill.active {
+            background: #1c1d1f;
+            color: white;
+        }
+
+        .learners {
+            color: #6b7280;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        .course-grid {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .course-card {
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .course-image {
+            width: 100%;
+            height: 160px;
+            background: #f5f5f5;
+            object-fit: cover;
+        }
+
+        .course-content {
+            padding: 15px;
+        }
+
+        .course-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .instructor {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+
+        .rating {
+            color: #b4690e;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-weight: bold;
+        }
+
+        .bestseller {
+            display: inline-block;
+            background: #eceb98;
+            color: #6a6a4e;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .show-all {
+            display: block;
+            margin: 20px;
+            padding: 10px 20px;
+            border: 1px solid #1c1d1f;
+            background: white;
+            color: #1c1d1f;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .show-all:hover {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-categories">
+        <span class="category-pill active">Web Development <span class="learners">13.3M+ learners</span></span>
+        <span class="category-pill">JavaScript <span class="learners">17.7M+ learners</span></span>
+        <span class="category-pill">React JS <span class="learners">7M+ learners</span></span>
+        <span class="category-pill">Angular <span class="learners">4M+ learners</span></span>
+        <span class="category-pill">Java <span class="learners">15.5M+ learners</span></span>
+        <span class="category-pill">Android Development <span class="learners">8M+ learners</span></span>
+    </nav>
+
+    <div class="course-grid">
+        <div class="course-card">
+            <img src="/api/placeholder/300/200" alt="Course" class="course-image">
+            <div class="course-content">
+                <h3 class="course-title">The Complete 2024 Web Development Bootcamp</h3>
+                <p class="instructor">Dr. Angela Yu, Developer and Lead Instructor</p>
+                <div class="rating">
+                    4.7 ★★★★★ (409,451)
+                </div>
+                <div class="price">৳1,699,000</div>
+                <span class="bestseller">Bestseller</span>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="/api/placeholder/300/200" alt="Course" class="course-image">
+            <div class="course-content">
+                <h3 class="course-title">The Web Developer Bootcamp 2024</h3>
+                <p class="instructor">Colt Steele</p>
+                <div class="rating">
+                    4.7 ★★★★★ (276,674)
+                </div>
+                <div class="price">৳2,399,000</div>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="/api/placeholder/300/200" alt="Course" class="course-image">
+            <div class="course-content">
+                <h3 class="course-title">Web Development Masterclass</h3>
+                <p class="instructor">YouAccel Training</p>
+                <div class="rating">
+                    4.3 ★★★★☆ (10,000)
+                </div>
+                <div class="price">৳1,499,000</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="show-all">Show all Web Development courses</button>
+</body>
+</html>
